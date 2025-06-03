@@ -1,15 +1,5 @@
 /* src\components\FormularioCadastro\styles.css */
 
-body {
-    background: linear-gradient(135deg, #9b4d4d, #063e66); 
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .container {
     background: white;
     padding: 40px 20px;

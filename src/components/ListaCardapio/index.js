@@ -11,7 +11,7 @@ function ListaDePratos() {
         const carregarPratos = async () => {
             try {
                 const response = await axios.get('https://backend-sakura.onrender.com/cardapio')
-                setUsuarios(response.data)
+                setPratos(response.data)
             } catch (error) {
                 alert('Erro ao buscar cardápio: ', error)
                 setPratos([])
