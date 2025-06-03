@@ -6,13 +6,13 @@ public enum Categoria_Enum {
     SOBREMESA("Sobremesa"),
     BEBIDA("Bebida");
 
-    private String texto;
+    private String texto_categoria;
 
-    Categoria_Enum(String texto) {
-        this.texto = texto;
+    Categoria_Enum(String texto_categoria) {
+        this.texto_categoria = texto_categoria;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getTexto_categoria() {
+        return texto_categoria;
     }
 }

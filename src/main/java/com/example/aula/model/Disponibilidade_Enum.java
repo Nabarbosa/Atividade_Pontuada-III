@@ -4,13 +4,13 @@ public enum Disponibilidade_Enum {
     EM_ESTOQUE("Em estoque"),
     ESGOTADO("Esgotado");
 
-    private String texto;
+    private String texto_disponibilidade;
 
-    Disponibilidade_Enum(String texto) {
-        this.texto = texto;
+    Disponibilidade_Enum(String texto_disponibilidade) {
+        this.texto_disponibilidade = texto_disponibilidade;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getTexto_disponibilidade() {
+        return texto_disponibilidade;
     }
 }

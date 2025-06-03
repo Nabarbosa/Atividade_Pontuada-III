@@ -21,10 +21,10 @@ public class Restaurante {
     private double preco;
 
     @Enumerated(EnumType.STRING)
-    private Categoria_Enum categoria;
+    private Categoria_Enum texto_categoria;
 
     @Enumerated(EnumType.STRING)
-    private Disponibilidade_Enum disponibilidade;
+    private Disponibilidade_Enum texto_disponibilidade;
 
     @NotBlank(message = "O URL do prato é obrigatório")
     private String urlImagem;
@@ -32,13 +32,13 @@ public class Restaurante {
     public Restaurante() {
     }
 
-    public Restaurante(Long id, String prato, String descricao, double preco, Categoria_Enum categoria, Disponibilidade_Enum disponibilidade, String urlImagem) {
+    public Restaurante(Long id, String prato, String descricao, double preco, Categoria_Enum texto_categoria, Disponibilidade_Enum texto_disponibilidade, String urlImagem) {
         this.id = id;
         this.prato = prato;
         this.descricao = descricao;
         this.preco = preco;
-        this.categoria = categoria;
-        this.disponibilidade = disponibilidade;
+        this.texto_categoria = categoria;
+        this.texto_disponibilidade = disponibilidade;
         this.urlImagem = urlImagem;
     }
 
@@ -50,12 +50,12 @@ public class Restaurante {
         this.id = id;
     }
 
-    public @NotBlank(message = "O nome do prato é obrigatório.") String getPrato() {
-        return prato;
+    public @NotBlank(message = "O nome do prato é obrigatório.") String getNome_prato() {
+        return nome_prato;
     }
 
-    public void setPrato(@NotBlank(message = "O nome do prato é obrigatório.") String prato) {
-        this.prato = prato;
+    public void setNome_prato(@NotBlank(message = "O nome do prato é obrigatório.") String nome_prato) {
+        this.nome_prato = nome_prato;
     }
 
     public @NotBlank(message = "A descição do produto é obrigatória.") String getDescricao() {
@@ -76,20 +76,20 @@ public class Restaurante {
         this.preco = preco;
     }
 
-    public Categoria_Enum getCategoria() {
-        return categoria;
+    public Categoria_Enum getTexto_categoria() {
+        return texto_categoria;
     }
 
-    public void setCategoria(Categoria_Enum categoria) {
-        this.categoria = categoria;
+    public void setTexto_categoria(Categoria_Enum texto_categoria) {
+        this.texto_categoria = texto_categoria;
     }
 
-    public Disponibilidade_Enum getDisponibilidade() {
-        return disponibilidade;
+    public Disponibilidade_Enum getTexto_disponibilidade() {
+        return texto_disponibilidade;
     }
 
-    public void setDisponibilidade(Disponibilidade_Enum disponibilidade) {
-        this.disponibilidade = disponibilidade;
+    public void setTexto_disponibilidade(Disponibilidade_Enum texto_disponibilidade) {
+        this.texto_disponibilidade = texto_disponibilidade;
     }
 
     public @NotBlank(message = "O URL do prato é obrigatório") String getUrlImagem() {
