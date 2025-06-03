@@ -1,0 +1,30 @@
+/* src\components\BemVindo\styles.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.btn-cadastro {
+    background-color: #0c5da0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 214px;
+    cursor: pointer;
+}
+
+.btn-cadastro:hover {
+    background-color: #063e66;
+}
