@@ -100,13 +100,10 @@ function CadastroPrato() {
                         value={urlImagem}
                         onChange={(e) => setUrlImagem(e.target.value)}
                     />
-
+                    <button type="submit" className="cadastrar">Cadastrar</button>
                 </form>
 
                     <div className="links">
-
-                        <button type="submit" className="cadastrar">Cadastrar</button>
-
                         <button onClick={() => navigate('/cardapio')} className="link-pratos">
                             Ver Cardápio
                         </button>
