@@ -13,21 +13,21 @@ function CadastroPrato() {
     const [prato, setPrato] = useState('')
     const [descricao, setDescricao] = useState('')
     const [preco, setPreco] = useState('')
-    const [categoria, setCategoria] = useState('')
-    const [disponibilidade, setDisponibilidade] = useState('')
+    const [texto_categoria, setTexto_categoria] = useState('')
+    const [texto_disponibilidade, setTexto_disponibilidade] = useState('')
     const [urlImagem, setUrlImagem] = useState('')
     const navigate = useNavigate()
     const { exibirMensagem , mensagem, tipoMensagem, visivel, fecharMensagem } = useMensagem()
 
     const cadastrarPrato = async () => {
         try {
-            const response = await axios.post('https://back-end-restaurante.onrender.com/cadastro', {prato, descricao, preco, categoria, disponibilidade, urlImagem})
+            const response = await axios.post('https://back-end-restaurante.onrender.com/cadastro', {prato, descricao, preco, texto_categoria, texto_disponibilidade, urlImagem})
             exibirMensagem(response.data.mensagem || 'Prato cadastrado com sucesso!', 'sucesso')
             setPrato('')
             setDescricao('')
             setPreco('')
-            setCategoria('')
-            setDisponibilidade('')
+            setTexto_categoria('')
+            setTexto_disponibilidade('')
             setUrlImagem('')
         } catch (error) {
             let erroMsg = 'Erro ao conectar ao servidor.'
@@ -73,9 +73,9 @@ function CadastroPrato() {
                         required
                     />
                     <select
-                        id="categoria"
-                        value={categoria}
-                        onChange={(e) => setCategoria(e.target.value)}
+                        id="texto_categoria"
+                        value={texto_categoria}
+                        onChange={(e) => setTexto_categoria(e.target.value)}
                         required
                     >
                         <option value="" disabled>Selecione a categoria</option>
@@ -84,9 +84,9 @@ function CadastroPrato() {
                         <option value="SOBREMESA">Sobremesa</option>
                     </select>
                     <select
-                        id="disponibilidade"
-                        value={disponibilidade}
-                        onChange={(e) => setDisponibilidade(e.target.value)}
+                        id="texto_disponibilidade"
+                        value={texto_disponibilidade}
+                        onChange={(e) => setTexto_disponibilidade(e.target.value)}
                         required
                     >
                         <option value="" disabled>Selecione a disponibilidade</option>

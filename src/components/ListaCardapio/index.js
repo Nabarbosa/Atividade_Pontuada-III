@@ -6,8 +6,8 @@ import './styles.css'
 
 export default function ListaDePratos() {
     const [pratos, setPratos] = useState([])
-    const [categoria, setCategoria] = useState('')
-    const [disponibilidade, setDisponibilidade] = useState('')
+    const [texto_categoria, setTexto_categoria] = useState('')
+    const [texto_disponibilidade, setTexto_disponibilidade] = useState('')
 
     useEffect(() => {
         async function carregarPratos () {
@@ -23,7 +23,7 @@ export default function ListaDePratos() {
     }, [])
 
     const pratosFiltrados = pratos.filter(prato => {
-        const categoriaMatch = categoria ? prato.categoria === categoria : true;
+        const categoriaMatch = texto_categoria ? prato.texto_categoria === texto_categoria : true;
         const disponibilidadeMatch = disponibilidade
             ? disponibilidade === 'Em Estoque'
                 ? prato.disponivel === true
