@@ -79,9 +79,9 @@ function CadastroPrato() {
                         required
                     >
                         <option value="" disabled>Selecione a categoria</option>
-                        <option value="ENTRADA">Entrada</option>
-                        <option value="PRATO_PRINCIPAL">Prato Principal</option>
-                        <option value="SOBREMESA">Sobremesa</option>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Prato Principal">Prato Principal</option>
+                        <option value="Sobremesa">Sobremesa</option>
                     </select>
                     <select
                         id="texto_disponibilidade"
@@ -90,8 +90,8 @@ function CadastroPrato() {
                         required
                     >
                         <option value="" disabled>Selecione a disponibilidade</option>
-                        <option value="EM_ESTOQUE">Em estoque</option>
-                        <option value="ESTOQUE">Esgotado</option>
+                        <option value="Em Estoque">Em estoque</option>
+                        <option value="Esgotado">Esgotado</option>
                     </select>
                     <input 
                         type="text"

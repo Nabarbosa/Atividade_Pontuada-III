@@ -8,15 +8,23 @@ function ListaDePratos() {
     const [pratos, setPratos] = useState([])
     const [texto_categoria, setTexto_categoria] = useState('')
     const [texto_disponibilidade, setTexto_disponibilidade] = useState('')
+    const [isLoading, setIsLoading] = useState(true)
+    const [hasError, setHasError] = useState(false)
 
     useEffect(() => {
         async function carregarPratos () {
+            setIsLoading(true)
+            setHasError(false)
             try {
-                const response = await axios.get('https://back-end-restaurante.onrender.com/cardapio')
+                const response = await axios.get('https://back-end-restaurante.onrender.com/cadastro')
                 setPratos(response.data)
             } catch (error) {
-                alert('Erro ao buscar cardápio: ', error)
+                console.error('Erro ao buscar cardápio', error)
+                alert('Erro ao buscar cardápio. Por Favor, tente novamente mais tarde.')
                 setPratos([])
+                setHasError(true)
+            } finally {
+                setIsLoading(false)
             }
         }
         carregarPratos()
@@ -34,7 +42,6 @@ function ListaDePratos() {
 
     return (
         <div>
-            {}
             <div className="categoria">
                 <label htmlFor="texto_categoria" className="filtrar-categoria">Categoria: </label>
                 <select
@@ -49,7 +56,6 @@ function ListaDePratos() {
                 </select>   
             </div>
 
-            {}
             <div className="disponibilidade">
                 <label htmlFor="texto_disponibilidade" className="filtrar-disp">Disponibilidade: </label>
                 <select
@@ -63,30 +69,34 @@ function ListaDePratos() {
                 </select>
             </div>
 
-            {}
-            <ul id="listaPratos" className="lista-pratos">
-                {pratosFiltrados.length === 0 ? (
-                    <div className="container-prato">
-                        <li className="nenhum-prato">Nenhum prato encontrado.</li>
-                    </div>
-                ) : (
-                    pratosFiltrados.map( prato => (
-                        <li key={prato.id}>
-                            <strong>Prato: </strong> {prato.prato}<br />
-                            <img 
-                                src={prato.urlImagem} 
-                                alt={`Imagem do prato ${prato.prato}`} 
-                                style={{width: '150px', height: 'auto'}}
-                            />
-                            <strong>Preço: </strong> {prato.preco}<br />   
-                            <strong>Disponibilidade: </strong> {prato.disponivel ? 'Em Estoque' : 'Esgotado'}<br />                                   
-                        </li>
-                    ))
-                )}
-            </ul>
+            {isLoading ? (
+                <p>Carregando cardápio...</p>
+            ) : hasError ? (
+                <p>Não foi possível carregar o cardápio. Verifique sua conexão ou tente novamente.</p>
+            ) : ( 
+                <ul id="listaPratos" className="lista-pratos">
+                    {pratosFiltrados.length === 0 ? (
+                        <div className="container-prato">
+                            <li className="nenhum-prato">Nenhum prato encontrado.</li>
+                        </div>
+                    ) : (
+                        pratosFiltrados.map( prato => (
+                            <li key={prato.id}>
+                                <strong>Prato: </strong> {prato.prato}<br />
+                                <img 
+                                    src={prato.urlImagem} 
+                                    alt={`Imagem do prato ${prato.prato}`} 
+                                    className="prato-imagem"
+                                />
+                                <strong>Preço: </strong> {prato.preco}<br />   
+                                <strong>Disponibilidade: </strong> {prato.disponivel ? 'Em Estoque' : 'Esgotado'}<br />                                   
+                            </li>
+                        ))
+                    )}
+                </ul>
+            )}
         </div>
-    )
-    
+    )   
 }
 
 export default ListaDePratos
