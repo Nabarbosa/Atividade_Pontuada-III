@@ -37,8 +37,8 @@ public class Restaurante {
         this.prato = prato;
         this.descricao = descricao;
         this.preco = preco;
-        this.texto_categoria = categoria;
-        this.texto_disponibilidade = disponibilidade;
+        this.texto_categoria = texto_categoria;
+        this.texto_disponibilidade = texto_disponibilidade;
         this.urlImagem = urlImagem;
     }
 
@@ -50,12 +50,12 @@ public class Restaurante {
         this.id = id;
     }
 
-    public @NotBlank(message = "O nome do prato é obrigatório.") String getNome_prato() {
-        return nome_prato;
+    public @NotBlank(message = "O nome do prato é obrigatório.") String getPrato() {
+        return prato;
     }
 
-    public void setNome_prato(@NotBlank(message = "O nome do prato é obrigatório.") String nome_prato) {
-        this.nome_prato = nome_prato;
+    public void setPrato(@NotBlank(message = "O nome do prato é obrigatório.") String prato) {
+        this.prato = prato;
     }
 
     public @NotBlank(message = "A descição do produto é obrigatória.") String getDescricao() {
