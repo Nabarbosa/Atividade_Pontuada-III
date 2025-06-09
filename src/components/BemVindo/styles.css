@@ -1,13 +1,25 @@
 /* src\components\BemVindo\styles.css */
 
-.container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #d2691e, #8b45);
     display: flex;
-    background-color: #f4f4f4;
-    flex-direction: column;
-    width: 640px;
-    height: 880px;
+    min-height: 100vh;
+}
+
+.container {
+    background: #f4f4f4;
+    width: 900px;
+    height: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
+    overflow: hidden;
+    position: relative;
 }
 
 .slogan {
@@ -15,34 +27,36 @@
     color : #822e17;
     font-size: 50px;
     font-weight: bold;
-    text-align: center;
-    margin: 160px 0;
     text-shadow: 2px 2px 0 #ccc;
+    text-align: center;
 }
 
 .logo {
-    width: 300px;
-    margin-bottom: 20px;
-    margin-left: 160px;
-    margin-top: 40px;
+    width: 333px;
+    height: 223px;
+    margin: 40px 40px;
+    display: block;
+    
 }
 
 .btn-cadastro {
     background-color: #822e17;
     color: #ffffff;
-    padding: 15px 32px;
     font-size: 20px;
-    margin: 4px 2px;
-    width: 220px;
+    margin: 70px 600px;
+    width: 200px;
     cursor: pointer;
-    display: inline-block;
     border-radius: 25px;
     font-weight: bold;
     text-decoration: none;
     box-shadow: 2px 2px 5px #ccc;
-    justify-content: flex-end;
-    margin-top: 80px;
-    margin-left: 200px;
+    display: block;
+}
+
+.circle {
+    width: 309px;
+    margin: -4px auto;
+    position: absolute;
 }
 
 .btn-cadastro:hover {
