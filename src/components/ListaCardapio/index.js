@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './styles.css'
 
-export default function ListaDePratos() {
+function ListaDePratos() {
     const [pratos, setPratos] = useState([])
     const [texto_categoria, setTexto_categoria] = useState('')
     const [texto_disponibilidade, setTexto_disponibilidade] = useState('')
@@ -36,7 +36,7 @@ export default function ListaDePratos() {
         <div>
             {}
             <div className="categoria">
-                <label htmlFor="categoria" className="filtrar-categoria">Categoria: </label>
+                <label htmlFor="texto_categoria" className="filtrar-categoria">Categoria: </label>
                 <select
                     id="texto_categoria"
                     value={texto_categoria}
@@ -51,7 +51,7 @@ export default function ListaDePratos() {
 
             {}
             <div className="disponibilidade">
-                <label htmlFor="disponibilidade" className="filtrar-disp">Disponibilidade: </label>
+                <label htmlFor="texto_disponibilidade" className="filtrar-disp">Disponibilidade: </label>
                 <select
                     id="texto_disponibilidade"
                     value={texto_disponibilidade}
@@ -88,3 +88,5 @@ export default function ListaDePratos() {
     )
     
 }
+
+export default ListaDePratos
