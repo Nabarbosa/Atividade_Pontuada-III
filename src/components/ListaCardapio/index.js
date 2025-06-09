@@ -24,8 +24,8 @@ export default function ListaDePratos() {
 
     const pratosFiltrados = pratos.filter(prato => {
         const categoriaMatch = texto_categoria ? prato.texto_categoria === texto_categoria : true;
-        const disponibilidadeMatch = disponibilidade
-            ? disponibilidade === 'Em Estoque'
+        const disponibilidadeMatch = texto_disponibilidade
+            ? texto_disponibilidade === 'Em Estoque'
                 ? prato.disponivel === true
                 : prato.disponivel === false
             : true;
@@ -38,9 +38,9 @@ export default function ListaDePratos() {
             <div className="categoria">
                 <label htmlFor="categoria" className="filtrar-categoria">Categoria: </label>
                 <select
-                    id="categoria"
-                    value={categoria}
-                    onChange={e => setCategoria(e.target.value)}
+                    id="texto_categoria"
+                    value={texto_categoria}
+                    onChange={e => setTexto_categoria(e.target.value)}
                 >
                     <option value="">Todas</option>
                     <option value="Entrada">Entrada</option>
@@ -53,9 +53,9 @@ export default function ListaDePratos() {
             <div className="disponibilidade">
                 <label htmlFor="disponibilidade" className="filtrar-disp">Disponibilidade: </label>
                 <select
-                    id="disponibilidade"
-                    value={disponibilidade}
-                    onChange={e => setDisponibilidade(e.target.value)}
+                    id="texto_disponibilidade"
+                    value={texto_disponibilidade}
+                    onChange={e => setTexto_disponibilidade(e.target.value)}
                 >
                     <option value="">Todas</option>
                     <option value="Em Estoque">Em Estoque</option>
