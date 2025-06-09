@@ -12,7 +12,7 @@ export default function ListaDePratos() {
     useEffect(() => {
         async function carregarPratos () {
             try {
-                const response = await axios.get('https://backend-sakura.onrender.com/cardapio')
+                const response = await axios.get('https://back-end-restaurante.onrender.com/cardapio')
                 setPratos(response.data)
             } catch (error) {
                 alert('Erro ao buscar cardápio: ', error)
@@ -35,34 +35,40 @@ export default function ListaDePratos() {
     return (
         <div>
             {}
-            <label htmlFor="categoria">Filtrar por categoria: </label>
-            <select
-                id="categoria"
-                value={categoria}
-                onChange={e => setCategoria(e.target.value)}
-            >
-                <option value="">Todas</option>
-                <option value="Entrada">Entrada</option>
-                <option value="Principal">Principal</option>
-                <option value="Sobremesa">Sobremesa</option>
-            </select>
+            <div className="categoria">
+                <label htmlFor="categoria" className="filtrar-categoria">Categoria: </label>
+                <select
+                    id="categoria"
+                    value={categoria}
+                    onChange={e => setCategoria(e.target.value)}
+                >
+                    <option value="">Todas</option>
+                    <option value="Entrada">Entrada</option>
+                    <option value="Principal">Principal</option>
+                    <option value="Sobremesa">Sobremesa</option>
+                </select>   
+            </div>
 
             {}
-            <label htmlFor="disponibilidade">Filtrar por disponibilidade: </label>
-            <select
-                id="disponibilidade"
-                value={disponibilidade}
-                onChange={e => setDisponibilidade(e.target.value)}
-            >
-                <option value="">Todas</option>
-                <option value="Em Estoque">Em Estoque</option>
-                <option value="Esgotado">Esgotado</option>
-            </select>
+            <div className="disponibilidade">
+                <label htmlFor="disponibilidade" className="filtrar-disp">Disponibilidade: </label>
+                <select
+                    id="disponibilidade"
+                    value={disponibilidade}
+                    onChange={e => setDisponibilidade(e.target.value)}
+                >
+                    <option value="">Todas</option>
+                    <option value="Em Estoque">Em Estoque</option>
+                    <option value="Esgotado">Esgotado</option>
+                </select>
+            </div>
 
             {}
             <ul id="listaPratos" className="lista-pratos">
                 {pratosFiltrados.length === 0 ? (
-                    <li>Nenhum prato encontrado.</li>
+                    <div className="container-prato">
+                        <li className="nenhum-prato">Nenhum prato encontrado.</li>
+                    </div>
                 ) : (
                     pratosFiltrados.map( prato => (
                         <li key={prato.id}>

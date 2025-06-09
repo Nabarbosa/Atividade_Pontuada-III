@@ -55,7 +55,14 @@ body {
 
 .circle {
     width: 309px;
-    margin: -4px auto;
+    margin: -7px 600px auto;
+    position: absolute;
+}
+
+.circle2 {
+    width: 309px;
+    height: 309px;
+    margin: 400px -50px auto;
     position: absolute;
 }
 

@@ -6,7 +6,7 @@
     background-color: #f4f4f4;
     align-items: center;
     justify-content: center;
-    width: 640px;
+    width: 0px;
     height: 880px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
@@ -64,4 +64,57 @@
     color: #f4f4f4; 
     text-decoration: none;
     margin-top: 10px;
+}
+
+button{
+    font: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #822e17;
+    border: 1px solid #ccc;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-lista select {
+    flex-direction: column;
+    font: Arial, sans-serif;
+    font-size: 14px;
+    width: 45%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+select:focus, input:focus {
+    border-color: #822e17;
+    outline: none;
+}
+
+.filtrar-categoria {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+
+}
+
+.filtrar-disp {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.nenhum-prato {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+
 }
