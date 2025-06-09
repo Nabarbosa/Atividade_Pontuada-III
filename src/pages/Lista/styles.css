@@ -1,6 +1,18 @@
 /* src\pages\Lista\styles.css */
 
-.pagina-lista-jogadores {
+.container-lista {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    align-items: center;
+    justify-content: center;
+    width: 640px;
+    height: 880px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+.pagina-lista-pratos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,28 +21,29 @@
     margin-top: -70px;
 }
   
-.pagina-lista-jogadores .container {
+.pagina-lista-pratos .container-lista {
     background-color: white;
     padding: 32px;
     box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 900px;
     max-height: 80vh;
     overflow-y: auto;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 50px;
 }
   
-.pagina-lista-jogadores .container h2 {
+.pagina-lista-pratos .container-lista h2 {
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 35px;
-    color: #284ea7;
+    font-size: 50px;
+    color: #822e17;
 }
   
-.pagina-lista-jogadores .container .link-voltar {
+.pagina-lista-pratos .container-lista .link-voltar {
     display: block;
+    width: 300px;
     margin-top: 20px;
     font-size: 16px;
     text-align: center;
@@ -38,12 +51,13 @@
     text-decoration: none;
 }
   
-.pagina-lista-jogadores .container .link-voltar:hover {
+.pagina-lista-pratos .container-lista .link-voltar:hover {
     text-decoration: none;
 }
 
-.link-pagina-inicial {
+.pagina-lista-pratos .link-pagina-inicial {
     display: block;
+    width: 300px;
     margin-top: 20px;
     font-size: 16px;
     text-align: center;

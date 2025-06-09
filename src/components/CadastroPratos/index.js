@@ -41,8 +41,8 @@ function CadastroPrato() {
     }
 
     return (
-        <div className="container">
-            <img src={logo} alt="Logo da empresa" className="logo" />
+        <div className="container-cadastro">
+                <img src={logo} alt="Logo da empresa" className="logo-cadastro" />   
             <h2>Cadastro de Pratos</h2>
             <form onSubmit={(e) => {e.preventDefault(); cadastrarPrato()}}>
                 <input 
@@ -98,16 +98,22 @@ function CadastroPrato() {
                     value={urlImagem}
                     onChange={(e) => setUrlImagem(e.target.value)}
                 />
-                <button type="submit">Cadastrar</button>
+
             </form>
 
-            <button onClick={() => navigate('/cardapio')} className="link-pratos">
-                Ver Cardápio
-            </button>
+                <div className="links">
 
-            <button onClick={() => navigate('/')} className='link-pagina-inicial'>
-                Voltar
-            </button>
+                    <button type="submit" className="cadastrar">Cadastrar</button>
+
+                    <button onClick={() => navigate('/cardapio')} className="link-pratos">
+                        Ver Cardápio
+                    </button>
+
+                    <button onClick={() => navigate('/')} className='link-pagina-inicial'>
+                        Voltar
+                    </button>
+
+                </div>
 
             <MensagemFeedback
                 mensagem={mensagem}

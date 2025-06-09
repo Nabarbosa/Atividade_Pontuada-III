@@ -13,15 +13,20 @@ function PaginaInicial() {
   };
 
   return (
-    <div>
-      <div className="container">
-        <img src={logo} alt="Logo" />
-        <h1>Seja Bem-Vindo(a) ao Coco Bambu!</h1>
-        <button type="button" onClick={handleCadastroClick} className='btn-cadastro'>
-          Página de Cadastro
-        </button>
+      <div>
+          <div className="container">
+            <img src={logo} alt="logo" className='logo'/>
+
+            <div class="slogan">
+              O MELHOR LUGAR <br/> PARA SE DELICIAR!!
+            </div>
+            
+            <button type="button" onClick={handleCadastroClick} className='btn-cadastro'>
+              Cadastrar Prato
+            </button>
+            
+        </div>
       </div>
-    </div>
   );
 }
 

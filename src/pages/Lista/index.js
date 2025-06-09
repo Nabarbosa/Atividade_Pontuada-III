@@ -9,7 +9,7 @@ function PaginaLista() {
     
 return (
         <div className='pagina-lista-pratos'>
-            <div className='container'>
+            <div className='container-lista'>
                 <h2>Lista de Pratos</h2>
                 <ListaDePratos />
                 <button onClick={() => navigate('/cadastro')} className='link-voltar'>
