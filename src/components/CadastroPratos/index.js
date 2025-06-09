@@ -64,12 +64,12 @@ function CadastroPrato() {
                         required
                     />
                     <input 
-                        type="number"
+                        type="text"
                         id="preco"
                         placeholder="Preço"
                         value={preco}
                         onChange={(e) => setPreco(e.target.value)}
-                        step="0.01"
+                        // step="0.01"
                         required
                     />
                     <select
