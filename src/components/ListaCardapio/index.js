@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './styles.css'
 
-export default function ListaDePratos() {
+function ListaDePratos() {
     const [pratos, setPratos] = useState([])
     const [texto_categoria, setTexto_categoria] = useState('')
     const [texto_disponibilidade, setTexto_disponibilidade] = useState('')
@@ -99,4 +99,4 @@ export default function ListaDePratos() {
     )   
 }
 
-// export default ListaDePratos
+export default ListaDePratos
