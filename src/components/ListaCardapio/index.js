@@ -16,8 +16,7 @@ function ListaDePratos() {
             setIsLoading(true)
             setHasError(false)
             try {
-                // const response = await axios.get('https://back-end-restaurante.onrender.com/cadastro')
-                const response = await axios.get('http:localhost:8080/cadastro')
+                const response = await axios.get('https://back-end-restaurante.onrender.com/cadastro')
                 setPratos(response.data)
             } catch (error) {
                 console.error('Erro ao buscar cardápio', error)
