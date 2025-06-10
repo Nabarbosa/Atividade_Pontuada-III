@@ -53,6 +53,7 @@ function ListaDePratos() {
                     <option value="Entrada">Entrada</option>
                     <option value="Prato Principal">Prato Principal</option>
                     <option value="Sobremesa">Sobremesa</option>
+                    <option value="Bebida">Bebida</option>
                 </select>   
             </div>
 
