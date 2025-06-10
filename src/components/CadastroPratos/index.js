@@ -21,7 +21,7 @@ function CadastroPrato() {
 
     const cadastrarPrato = async () => {
         try {
-            const response = await axios.post('https://back-end-restaurante.onrender.com/cadastro', {prato, descricao, preco: Number(preco), texto_categoria, disponivel: texto_disponibilidade === 'Em Estoque', urlImagem})
+            const response = await axios.post('https://back-end-restaurante.onrender.com/cadastro', {prato, descricao, preco, texto_categoria, texto_disponibilidade, urlImagem})
             exibirMensagem(response.data.mensagem || 'Prato cadastrado com sucesso!', 'sucesso')
             setPrato('')
             setDescricao('')
