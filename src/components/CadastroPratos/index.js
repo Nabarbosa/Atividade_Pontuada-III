@@ -94,7 +94,7 @@ function CadastroPrato() {
                     <option value="Esgotado">Esgotado</option>
                     </select>
                 <input 
-                    type="url"
+                    type="text"
                     id="urlImagem"
                     placeholder="URL da Imagem"
                     value={urlImagem}
