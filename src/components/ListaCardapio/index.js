@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './styles.css'
 
-function ListaDePratos() {
+export default function ListaDePratos() {
     const [pratos, setPratos] = useState([])
     const [texto_categoria, setTexto_categoria] = useState('')
     const [texto_disponibilidade, setTexto_disponibilidade] = useState('')
@@ -16,7 +16,7 @@ function ListaDePratos() {
             setIsLoading(true)
             setHasError(false)
             try {
-                const response = await axios.get('https://back-end-restaurante.onrender.com/cardapio')
+                const response = await axios.get('https://back-end-restaurante.onrender.com/cadastro')
                 setPratos(response.data)
             } catch (error) {
                 console.error('Erro ao buscar cardápio', error)
@@ -99,4 +99,4 @@ function ListaDePratos() {
     )   
 }
 
-export default ListaDePratos
+// export default ListaDePratos
