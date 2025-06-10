@@ -64,7 +64,7 @@ function CadastroPrato() {
                         required
                     />
                     <input 
-                        type="number"
+                        type="text"
                         id="preco"
                         placeholder="Preço"
                         value={preco}
