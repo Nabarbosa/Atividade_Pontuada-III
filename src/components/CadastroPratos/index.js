@@ -90,7 +90,7 @@ function CadastroPrato() {
                     required
                 >
                     <option value="" disabled>Selecione a disponibilidade</option>
-                    <option value="Em Estoque">Em estoque</option>
+                    <option value="Em Estoque">Em Estoque</option>
                     <option value="Esgotado">Esgotado</option>
                     </select>
                 <input 
