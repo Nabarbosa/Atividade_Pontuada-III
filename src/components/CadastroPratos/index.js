@@ -43,83 +43,83 @@ function CadastroPrato() {
 
     return (
         <div className="container-cadastro">
-                <img src={foods} alt="foods" className="background" />
-                    <img src={logo} alt="Logo da empresa" className="logo-cadastro" />   
-                <h2>Cadastro de Pratos</h2>
-                <form onSubmit={(e) => {e.preventDefault(); cadastrarPrato()}}>
-                    <input 
-                        type="text"
-                        id="prato"
-                        placeholder="Prato"
-                        value={prato}
-                        onChange={(e) => setPrato(e.target.value)}
-                        required
-                    />
-                    <input 
-                        type="text"
-                        id="descricao"
-                        placeholder="Descrição"
-                        value={descricao}
-                        onChange={(e) => setDescricao(e.target.value)}
-                        required
-                    />
-                    <input 
-                        type="text"
-                        id="preco"
-                        placeholder="Preço"
-                        value={preco}
-                        onChange={(e) => setPreco(e.target.value)}
-                        required
-                    />
-                    <select
-                        id="texto_categoria"
-                        value={texto_categoria}
-                        onChange={(e) => setTexto_categoria(e.target.value)}
-                        required
-                    >
-                        <option value="" disabled>Selecione a categoria</option>
-                        <option value="Entrada">Entrada</option>
-                        <option value="Prato Principal">Prato Principal</option>
-                        <option value="Sobremesa">Sobremesa</option>
-                    </select>
-                    <select
-                        id="texto_disponibilidade"
-                        value={texto_disponibilidade}
-                        onChange={(e) => setTexto_disponibilidade(e.target.value)}
-                        required
-                    >
-                        <option value="" disabled>Selecione a disponibilidade</option>
-                        <option value="Em Estoque">Em estoque</option>
-                        <option value="Esgotado">Esgotado</option>
-                    </select>
-                    <input 
-                        type="text"
-                        id="urlImagem"
-                        placeholder="URL da Imagem"
-                        value={urlImagem}
-                        onChange={(e) => setUrlImagem(e.target.value)}
-                    />
-                    <button type="submit" className="cadastrar">Cadastrar</button>
-                </form>
-
-                    <div className="links">
-                        <button onClick={() => navigate('/cardapio')} className="link-pratos">
-                            Ver Cardápio
-                        </button>
-
-                        <button onClick={() => navigate('/')} className='link-pagina-inicial'>
-                            Voltar
-                        </button>
-
-                    </div>
-
-                <MensagemFeedback
-                    mensagem={mensagem}
-                    tipo={tipoMensagem}
-                    visivel={visivel}
-                    onclose={fecharMensagem}
+            <img src={foods} alt="foods" className="background" />
+                <img src={logo} alt="Logo da empresa" className="logo-cadastro" />   
+            <h2>Cadastro de Pratos</h2>
+            <form onSubmit={(e) => {e.preventDefault(); cadastrarPrato()}}>
+                <input 
+                    type="text"
+                    id="prato"
+                    placeholder="Prato"
+                    value={prato}
+                    onChange={(e) => setPrato(e.target.value)}
+                    required
                 />
-            </div>
+                <input 
+                    type="text"
+                    id="descricao"
+                    placeholder="Descrição"
+                    value={descricao}
+                    onChange={(e) => setDescricao(e.target.value)}
+                    required
+                />
+                <input 
+                    type="text"
+                    id="preco"
+                    placeholder="Preço"
+                    value={preco}
+                    onChange={(e) => setPreco(e.target.value)}
+                    required
+                />
+                <select
+                    id="texto_categoria"
+                    value={texto_categoria}
+                    onChange={(e) => setTexto_categoria(e.target.value)}
+                    required
+                >
+                    <option value="" disabled>Selecione a categoria</option>
+                    <option value="Entrada">Entrada</option>
+                    <option value="Prato Principal">Prato Principal</option>
+                    <option value="Sobremesa">Sobremesa</option>
+                </select>
+                <select
+                    id="texto_disponibilidade"
+                    value={texto_disponibilidade}
+                    onChange={(e) => setTexto_disponibilidade(e.target.value)}
+                    required
+                >
+                    <option value="" disabled>Selecione a disponibilidade</option>
+                    <option value="Em Estoque">Em estoque</option>
+                    <option value="Esgotado">Esgotado</option>
+                    </select>
+                <input 
+                    type="text"
+                    id="urlImagem"
+                    placeholder="URL da Imagem"
+                    value={urlImagem}
+                    onChange={(e) => setUrlImagem(e.target.value)}
+                />
+                <button type="submit" className="cadastrar">Cadastrar</button>
+            </form>
+
+                <div className="links">
+                    <button onClick={() => navigate('/cardapio')} className="link-pratos">
+                        Ver Cardápio
+                    </button>
+
+                    <button onClick={() => navigate('/')} className='link-pagina-inicial'>
+                        Voltar
+                    </button>
+
+                </div>
+
+            <MensagemFeedback
+                mensagem={mensagem}
+                tipo={tipoMensagem}
+                visivel={visivel}
+                onclose={fecharMensagem}
+            />
+        </div>
     )
 }
 

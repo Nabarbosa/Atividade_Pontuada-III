@@ -51,7 +51,7 @@ export default function ListaDePratos() {
                 >
                     <option value="">Todas</option>
                     <option value="Entrada">Entrada</option>
-                    <option value="Principal">Principal</option>
+                    <option value="Prato Principal">Prato Principal</option>
                     <option value="Sobremesa">Sobremesa</option>
                 </select>   
             </div>
