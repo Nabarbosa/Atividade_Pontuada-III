@@ -1,18 +1,45 @@
 /* src\components\ListaCardapio\styles.css */
 
-.lista-usuarios li {
-    text-align: left;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .lista-usuarios li strong {
-    font-weight: bold;
-  }
+.lista-pratos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  list-style: none;
+}
 
+.lista-pratos li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+}
 
-  
+.prato-imagem {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.lista-pratos li strong {
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+
+.categoria {
+  font-weight: bold;
+}
+
+.disponibilidade {
+  font-weight: bold;
+}
+

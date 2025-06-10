@@ -33,7 +33,7 @@ function ListaDePratos() {
     const pratosFiltrados = pratos.filter(prato => {
         const categoriaMatch = texto_categoria ? prato.texto_categoria === texto_categoria : true;
         const disponibilidadeMatch = texto_disponibilidade
-            ? texto_disponibilidade === 'Em Estoque'
+            ? texto_disponibilidade === 'EM_ESTOQUE'
                 ? prato.disponivel === true
                 : prato.disponivel === false
             : true;
@@ -90,7 +90,7 @@ function ListaDePratos() {
                                     className="prato-imagem"
                                 />
                                 <strong>Preço: </strong> {prato.preco}<br />   
-                                <strong>Disponibilidade: </strong> {prato.disponivel ? 'Em Estoque' : 'Esgotado'}<br />                                   
+                                <strong>Disponibilidade: </strong> {prato.texto_disponibilidade ? 'Em Estoque' : 'Esgotado'}<br />                                                                
                             </li>
                         ))
                     )}
