@@ -50,10 +50,10 @@ function ListaDePratos() {
                     onChange={e => setTexto_categoria(e.target.value)}
                 >
                     <option value="">Todas</option>
-                    <option value="Entrada">Entrada</option>
-                    <option value="Prato Principal">Prato Principal</option>
-                    <option value="Sobremesa">Sobremesa</option>
-                    <option value="Bebida">Bebida</option>
+                    <option value="ENTRADA">Entrada</option>
+                    <option value="PRATO_PRINCIPAL">Prato Principal</option>
+                    <option value="SOBREMESA">Sobremesa</option>
+                    <option value="BEBIDA">Bebida</option>
                 </select>   
             </div>
 
@@ -65,8 +65,8 @@ function ListaDePratos() {
                     onChange={e => setTexto_disponibilidade(e.target.value)}
                 >
                     <option value="">Todas</option>
-                    <option value="Em Estoque">Em Estoque</option>
-                    <option value="Esgotado">Esgotado</option>
+                    <option value="EM_ESTOQUE">Em Estoque</option>
+                    <option value="ESGOTADO">Esgotado</option>
                 </select>
             </div>
 
