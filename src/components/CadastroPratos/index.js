@@ -101,18 +101,20 @@ function CadastroPrato() {
                     onChange={(e) => setUrlImagem(e.target.value)}
                 />
                 <button type="submit" className="cadastrar">Cadastrar</button>
-            </form>
-
+               
                 <div className="links">
-                    <button onClick={() => navigate('/cardapio')} className="link-pratos">
-                        Ver Cardápio
-                    </button>
-
-                    <button onClick={() => navigate('/')} className='link-pagina-inicial'>
+                    <button onClick={() => navigate('/')} className='cad-link-pagina-inicial'>
                         Voltar
                     </button>
 
+                    <button onClick={() => navigate('/cardapio')} className="cad-link-pratos">
+                        Ver Cardápio
+                    </button>
                 </div>
+            </form>
+
+
+
 
             <MensagemFeedback
                 mensagem={mensagem}

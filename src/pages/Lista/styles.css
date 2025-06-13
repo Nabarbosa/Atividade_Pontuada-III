@@ -20,7 +20,7 @@
     color: #822e17;
 }
   
-.link-voltar {
+.lista-link-voltar {
     width: 200px;
     margin-top: 20px;
     font-size: 16px;
@@ -29,11 +29,11 @@
     text-decoration: none;
 }
   
-.link-voltar:hover {
+.lista-link-voltar:hover {
     text-decoration: none;
 }
 
-.link-pagina-inicial {
+.lista-link-pagina-inicial {
     display: block;
     margin: auto;
     width: 200px;

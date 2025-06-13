@@ -12,10 +12,10 @@ return (
             <div className='container-lista'>
                 <h2>Lista de Pratos</h2>
                 <ListaDePratos />
-                <button onClick={() => navigate('/cadastro')} className='link-voltar'>
+                <button onClick={() => navigate('/cadastro')} className='lista-link-voltar'>
                     Cadastrar Pratos
                 </button>
-                <button onClick={() => navigate('/')} className='link-pagina-inicial'>
+                <button onClick={() => navigate('/')} className='lista-link-pagina-inicial'>
                     Página Inicial
                 </button>
             </div>
